@@ -4,12 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
+
+    <!-- Internal Styling -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0
+        }
+
+        .nav-header {
+            background-color: #5f9ea0;
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-ul {
+            list-style: none;
+            display: flex;
+            gap: 64px;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <header class="nav-header">
         <nav>
-            <ul>
-                <li>Om mig</li>
+            <ul class="nav-ul">
+                <li><a href="#footer">Om mig</a></li>
                 <li>Utbildning</li>
                 <li>Arbetslivserfarenhet</li>
                 <li>Tech stack</li>
@@ -18,7 +40,7 @@
     </header>
 
     <main>
-        <section>
+        <section class="about-me">
             <h2>Om mig</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis rem, repellat ut corrupti rerum aliquid incidunt eaque perspiciatis perferendis libero.</p>
         </section>
@@ -98,5 +120,9 @@
             </div>
         </section>
     </main>
+    <footer id="footer">
+        <a href="tel:+46700001122">070 000 11 22</a>
+        <a href="mailto:melvinkempe@hotmail.com">Skicka email</a>
+    </footer>
 </body>
 </html>
