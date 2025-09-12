@@ -1,8 +1,11 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html> <!--Talar om för webbläsaren vilken HTML version det är. I detta fall HTML 5-->
+<html lang="sv"> <!--Språkattribut. sv för svenska, en för engelska-->
+<head> <!--Head innehåller information om själva webbsidan, syns dock inte på den-->
+
+    <!--META-taggar är som etiketter på paketets utsida - de berättar OM innehållet utan att synas i själva innehållet.-->
+
+    <meta charset="UTF-8"> <!--Teckenkodning för att kunna använda bland annat ÅÄÖ-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Responsiv design för mobiler. Talar om för mobilen hur stor webbsidan ska visas-->
     <title>CV</title>
 
     <!-- Internal Styling -->
@@ -25,27 +28,49 @@
             gap: 64px;
             justify-content: space-between;
         }
+
+        a {
+            transition: all 0.2s ease-in-out;
+            text-decoration: none;
+            color: #f7f7f7;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a:hover {
+            transition: all 0.2s ease-in-out;
+            color: #000;
+            text-decoration: underline;
+        }
+
+        main {
+           background-color: rgb(225, 225, 225); 
+           display: flex;
+           flex-direction: column;
+           gap: 64px;
+           padding: 64px;
+        }
     </style>
 </head>
-<body>
-    <header class="nav-header">
-        <nav>
+<body> <!--Här i läggs all HTML-kod som syns på webbsidan-->
+    <header class="nav-header"> <!-- HEADER - är en semantisk HTML-tagg som markerar huvudet/toppen av något - kan vara hela sidan ELLER en del av sidan -->
+        <nav> <!--Semantisk HTML för navigation-->
             <ul class="nav-ul">
-                <li><a href="#footer">Om mig</a></li>
-                <li>Utbildning</li>
-                <li>Arbetslivserfarenhet</li>
-                <li>Tech stack</li>
+                <li><a href="#about-me">Om mig</a></li>
+                <li><a href="#education">Utbildning</a> </li>
+                <li><a href="#work">Arbetslivserfarenhet</a></li>
+                <li><a href="#tech-stack">Tech stack</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="about-me">
+    <main> <!--MAIN - är en semantisk HTML-tagg som används för allt huvudinnehåll på webbsidan-->
+        <section class="about-me" id="about-me">
             <h2>Om mig</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis rem, repellat ut corrupti rerum aliquid incidunt eaque perspiciatis perferendis libero.</p>
         </section>
 
-        <section>
+        <section id="education">
             <h2>Utbildning</h2>
 
             <article>
@@ -70,7 +95,7 @@
             </article>
         </section>
 
-        <section>
+        <section id="work">
             <h2>Arbetslivserfarenhet</h2>
 
             <article>
@@ -95,7 +120,7 @@
             </article>
         </section>
 
-        <section>
+        <section id="tech-stack">
             <h2>Tech stack</h2>
 
             <div>
@@ -120,7 +145,7 @@
             </div>
         </section>
     </main>
-    <footer id="footer">
+    <footer id="contact">
         <a href="tel:+46700001122">070 000 11 22</a>
         <a href="mailto:melvinkempe@hotmail.com">Skicka email</a>
     </footer>
