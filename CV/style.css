@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-header {
+  background-color: #5f9ea0;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-ul {
+  list-style: none;
+  display: flex;
+  gap: 64px;
+  justify-content: space-between;
+}
+
+a {
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+  transition: all 0.2s ease-in-out;
+  color: #0f0f0f;
+  text-decoration: underline;
+}
+
+main {
+  background-color: rgb(225, 225, 225);
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #d2d2d2;
+  padding: 4rem;
+}
+
+.education {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #c0c4cc;
+  padding: 4rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.article-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ol {
+  list-style: none;
+  line-height: 1.2rem;
+}
+
+.p-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.work {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #d2d2d2;
+  padding: 4rem;
+}
+
+.tech-stack {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #c0c4cc;
+  padding: 4rem;
+}
+
+.tech-stack-ul {
+  padding: 16px 14px;
+  /*padding: 20px 0 4px 24px;*/
+}
+
+footer {
+  background-color: #5f9ea0;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
