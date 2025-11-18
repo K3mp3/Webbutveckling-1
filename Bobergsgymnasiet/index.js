@@ -2,6 +2,8 @@ const nav = document.querySelector("nav");
 const mobileNav = document.querySelector(".mobile-nav");
 const hamburgerBtn = document.querySelector("#menu-open");
 
+const closeBtn = document.querySelector("#menu-close");
+
 const news = [
   {
     id: "1",
@@ -23,21 +25,23 @@ const news = [
     id: "3",
     img: "./img/img3.webp",
     title: "Föräldramöte åk 1 9/9",
-    date: "2 septembet 2025",
+    date: "2 september 2025",
     content:
       "Till vårdnadshavare för elever i årskurs 1 Välkomna till föräldramöte! Ni är varmt välkomna till skolan för att träffa rektor, mentorer och en del annan personal. Vi vill gärna ha ett nära samarbete med er så att vi tillsammans kan hjälpa eleverna att lyckas med sin skolgång. Det är första terminen för era ungdomar i en ny skolform som ställer annorlunda krav och har andra förutsättningar än tidigare. Tid:      Tisdag 9 september 2025, kl. 18.30. Plats:            Aulan, Bobergsgymnasiet (mitt i huset, en trappa upp från huvudentrén). Vi kommer först ses i helgrupp för en del allmän information. Efter det går ni vidare med mentorerna för ytterligare information och samtal om just er klass. Under kvällen kommer vi att tala om våra regler och rutiner, informera om programmen i gymnasieskolan och hur arbetet med elevernas lärande går till på Bobergsgymnasiet. Naturligtvis bjuder vi även på fika. Välkomna! / Jennie Stadling Wilsson, rektor Bobergsgymnasiet. Vi ber er fylla i nedanstående talong som lämnas till mentor senast torsdag 4/9. Tack!",
   },
 ];
 
 const closeMenu = () => {
-  mobileNav.classList.add("hidden");
-  nav.classList.add("nav-closed");
   hamburgerBtn.classList.remove("hidden");
+  closeBtn.classList.add("hidden");
+
+  mobileNav.classList.add("hidden");
 };
 
 const openMenu = () => {
   hamburgerBtn.classList.add("hidden");
-  nav.classList.remove("nav-closed");
+  closeBtn.classList.remove("hidden");
+
   mobileNav.classList.remove("hidden");
 };
 
