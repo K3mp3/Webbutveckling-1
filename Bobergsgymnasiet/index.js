@@ -174,6 +174,18 @@ const renderNewsDetail = () => {
 const createDateElement = (event) => {
   //Kolla om händelsen har ett slutdatum
   if (event.endDay && event.endMonth) {
+    //Kolla om händelsen är inom samma månad
+    if (event.month === event.endMonth) {
+      // Om samma månad, visa datum i en ruta
+      return `
+        <div class="event-date">
+          <h2>${event.day} - ${event.endDay}</h2>
+        </div>
+        <div class="event-date">
+          <p>${event.month} - ${event.endMonth}</p>
+        </div>
+      `;
+    }
   }
 };
 
