@@ -4,6 +4,8 @@ const hamburgerBtn = document.querySelector("#menu-open");
 
 const closeBtn = document.querySelector("#menu-close");
 
+let shownEvents = 3;
+
 const news = [
   {
     id: "1",
@@ -28,6 +30,76 @@ const news = [
     date: "2 september 2025",
     content:
       "Till vårdnadshavare för elever i årskurs 1 Välkomna till föräldramöte! Ni är varmt välkomna till skolan för att träffa rektor, mentorer och en del annan personal. Vi vill gärna ha ett nära samarbete med er så att vi tillsammans kan hjälpa eleverna att lyckas med sin skolgång. Det är första terminen för era ungdomar i en ny skolform som ställer annorlunda krav och har andra förutsättningar än tidigare. Tid:      Tisdag 9 september 2025, kl. 18.30. Plats:            Aulan, Bobergsgymnasiet (mitt i huset, en trappa upp från huvudentrén). Vi kommer först ses i helgrupp för en del allmän information. Efter det går ni vidare med mentorerna för ytterligare information och samtal om just er klass. Under kvällen kommer vi att tala om våra regler och rutiner, informera om programmen i gymnasieskolan och hur arbetet med elevernas lärande går till på Bobergsgymnasiet. Naturligtvis bjuder vi även på fika. Välkomna! / Jennie Stadling Wilsson, rektor Bobergsgymnasiet. Vi ber er fylla i nedanstående talong som lämnas till mentor senast torsdag 4/9. Tack!",
+  },
+];
+
+const events = [
+  {
+    day: "10",
+    month: "DEC",
+    title: "Nobeldag/UF-mässa",
+    weekday: "onsdag",
+    statusColor: "yellow",
+  },
+  {
+    day: "19",
+    month: "DEC",
+    title: "Julavslutning",
+    weekday: "fredag",
+    statusColor: "green",
+  },
+  {
+    day: "20",
+    month: "DEC",
+    endDay: "07",
+    endMonth: "JAN",
+    title: "Jullov",
+    weekday: "lördag",
+    statusColor: "red",
+  },
+  {
+    day: "15",
+    month: "JAN",
+    title: "Studiebesök åk2",
+    weekday: "onsdag",
+    statusColor: "yellow",
+  },
+  {
+    day: "28",
+    month: "JAN",
+    endDay: "30",
+    endMonth: "JAN",
+    title: "Nobeldag/UF-mässa",
+    weekday: "onsdag",
+    statusColor: "yellow",
+  },
+  {
+    day: "10",
+    month: "DEC",
+    title: "Nobeldag/UF-mässa",
+    weekday: "onsdag",
+    statusColor: "yellow",
+  },
+  {
+    day: "10",
+    month: "DEC",
+    title: "Nobeldag/UF-mässa",
+    weekday: "onsdag",
+    statusColor: "yellow",
+  },
+  {
+    day: "10",
+    month: "DEC",
+    title: "Nobeldag/UF-mässa",
+    weekday: "onsdag",
+    statusColor: "yellow",
+  },
+  {
+    day: "10",
+    month: "DEC",
+    title: "Nobeldag/UF-mässa",
+    weekday: "onsdag",
+    statusColor: "yellow",
   },
 ];
 
@@ -96,6 +168,12 @@ const renderNewsDetail = () => {
     container.innerHTML = `
       <p>Artikeln kunde inte hittas.</p>
     `;
+  }
+};
+
+const createDateElement = (event) => {
+  //Kolla om händelsen har ett slutdatum
+  if (event.endDay && event.endMonth) {
   }
 };
 
