@@ -179,13 +179,40 @@ const createDateElement = (event) => {
       // Om samma månad, visa datum i en ruta
       return `
         <div class="event-date">
-          <h2>${event.day} - ${event.endDay}</h2>
+          <div class="date-container">
+            <h2>${event.day} - ${event.endDay}</h2>
+          </div>
         </div>
         <div class="event-date">
-          <p>${event.month} - ${event.endMonth}</p>
+          <div class="month-container">
+            <p>${event.month} - ${event.endMonth}</p>
+          </div>
+        </div>
+      `;
+    } else {
+      return `
+        <div class="event-date">
+          <div class="date-container">
+            <h2>${event.day}
+          </div>
+          <div class="date-container">
+            <h2>${event.endDay}
+          </div>
+        </div>
+        <div class="event-date">
+          <div class="month-container">
+            <h2>${event.month}
+          </div>
+          <div class="month-container">
+            <h2>${event.endMonth}
+          </div>
         </div>
       `;
     }
+  } else {
+    return `
+      
+    `;
   }
 };
 
