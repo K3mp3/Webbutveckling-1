@@ -257,7 +257,10 @@ const handleShowMore = () => {
     btn.classList.add("hidden");
   }
 };
+const showMoreBtn = document.querySelector(".show-more-btn");
+if (showMoreBtn) showMoreBtn.addEventListener("click", handleShowMore);
 
 // Kör rätt funktion beroende på vilken sida vi är på
 if (document.querySelector(".news-grid")) renderNews();
 if (document.querySelector(".news-content")) renderNewsDetail();
+if (document.querySelector(".event-list")) renderEvents();
