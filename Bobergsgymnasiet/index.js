@@ -179,9 +179,11 @@ const createDateElement = (event) => {
       // Om samma månad, visa datum i en ruta
       return `
         <time class="event-date" datetime="${event.day}-${event.month}">
-          <span class="date-day">${event.day}</span>
-          <span class="date-separator">-</span>
-          <span class="date-day">${event.endDay}</span>
+          <div class="day-wrapper">
+            <span class="date-day">${event.day}</span>
+            <span class="date-separator">-</span>
+            <span class="date-day">${event.endDay}</span>
+          </div>
           <span class="date-month">${event.month}</span>
         </time>
       `;
@@ -191,7 +193,8 @@ const createDateElement = (event) => {
           <span class="date-day">${event.day}</span>
           <span class="date-month">${event.month}</span>
         </time>
-        <time class="event-date" datetime="${event.endDay}-${event.endMonth}>
+
+        <time class="event-date" datetime="${event.endDay}-${event.endMonth}">
           <span class="date-day">${event.endDay}</span>
           <span class="date-month">${event.endMonth}</span>
         </time>
@@ -226,19 +229,20 @@ const renderEvents = () => {
 
     eventElement.innerHTML = `
       <article class="event-card">
+        <hr />
         <div class="date-wrapper">
           ${dateHtml}
         </div>
         <section class="event-info">
           <header class="event-title-row">
             <h3 class="event-title">${event.title}</h3>
-            <span class="status-circle status-${event.statusColor}" aria-label="Status">
-            </span>
+            <div class="status-circle status-${event.statusColor}" aria-label="Status">
+            </div>
           </header>
           <time class="event-weekday" datetime="${event.weekday}">${event.weekday}</time>
         </section>
         <a href="#" class="event-details">Detaljer</a>
-        <hr />
+        <hr class="hr"/>
       </article>
     `;
 

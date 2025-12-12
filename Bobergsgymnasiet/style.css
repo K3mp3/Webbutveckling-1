@@ -74,6 +74,7 @@ a {
   padding: 16px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 32px;
 }
 
@@ -81,10 +82,15 @@ a {
   border: 1px solid #323232;
   padding: 8px;
   border-radius: 12px;
+  width: 100%;
+  max-width: 350px;
 }
 
 .news-image {
-  max-width: 100%;
+  width: 100%;
+  max-width: 350px;
+  max-height: 200px;
+  object-fit: cover;
   border-radius: 12px;
 }
 
@@ -128,13 +134,8 @@ a {
   gap: 24px;
 }
 
-.event-card {
-  background-color: burlywood;
-}
-
 .date-wrapper {
   padding: 16px;
-  background-color: #185885;
   display: flex;
   gap: 16px;
 }
@@ -149,6 +150,13 @@ a {
   align-items: center;
 }
 
+.day-wrapper {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 2px 4px;
+}
+
 .date-day {
   padding: 8px;
 }
@@ -157,4 +165,49 @@ a {
   padding: 8px;
   border-radius: 0px 0px 8px 8px;
   background-color: rgb(162, 67, 67);
+  min-width: calc(100% - 16px);
+  text-align: center;
+}
+
+.event-info {
+  padding: 16px;
+}
+
+.event-title-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.status-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.status-green {
+  background-color: rgb(75, 235, 7);
+}
+
+.status-yellow {
+  background-color: rgb(235, 223, 7);
+}
+
+.status-red {
+  background-color: rgb(235, 37, 7);
+}
+
+.event-details {
+  margin: 16px;
+  color: #111111;
+}
+
+.hr {
+  margin-top: 16px;
+}
+
+@media (min-width: 640px) {
+  .news-grid {
+    background-color: brown;
+  }
 }
